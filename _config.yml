@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Wang Xiaoye / MPhil Student at Cambridge"
+title                    : "Wang Xiaoye"
 title_separator          : "-"
 name                     : &name "Wang Xiaoye"
 description              : &description "personal description"
@@ -24,8 +24,8 @@ author:
   avatar           : "profile.png"
   name             : "Wang Xiaoye"
   pronouns         : # example: "she/her"  
-  bio              : #"Short biography for the left-hand sidebar"
-  location         : "The Old Schools, Trinity Ln, Cambridge CB2 1TN"
+  bio              : "MPhil student at Cambrigde & intern at MMLab"
+  location         : "The United Kingdom"
   employer         : "University of Cambridge"
   uri              : # URL
   email            : "wangxiaoye951@gmail.com" 
@@ -43,7 +43,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "adamwang0224"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
