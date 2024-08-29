@@ -21,7 +21,7 @@ main:
   #  url: /year-archive/
     
   - title: "CV"
-    url: /CVwxy/
+    url: /_CVwxy/
     
   #- title: "Guide"
   #  url: /markdown/
