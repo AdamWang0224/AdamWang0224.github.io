@@ -16,8 +16,8 @@ Education
 
 Internship
 ==========
-* Research Intern at CogAI4Sci, Yong Loo Lin School of Medicine, National University of Singapore
-* Research Assistant at Institute for Infocomm Research, A*STAR
+* Research Intern at CogAI4Sci, School of Medicine, National University of Singapore, 2024.03 - 2024.06
+* Research Assistant at Institute for Infocomm Research, A*STAR, 2023.07 - 2024.01
 
 Selected Awards
 ==========
