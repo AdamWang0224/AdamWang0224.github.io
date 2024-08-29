@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+I am currently an MPhil student at University of Cambridge, majoring in Data Intensive Science, mentored by Prof. [James Fergusson](https://www.maths.cam.ac.uk/person/jf334). Before that, I received my bachelor degree in 2024 from Department of Mathematics, Harbin Institute of Technology, under the supervision of Prof. Wenxue Li. In the final year of my undergraduate studies, I received the Singapore International Pre-Graduate Award([SINGA](https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa)) and subsequently worked as a research assistant at the Institute for Infocomm Research, A*STAR, under the supervision of Principal Scientist [Jun Cheng](https://samjcheng.github.io/), and as a research intern at the School of Medicine, National University of Singapore, under the supervision of Prof. [Dianbo Liu](http://www.cogai4sci.com/). 
 
 A data-driven personal website
 ======
