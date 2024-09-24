@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "homepage.jpg"
   name             : "Wang Xiaoye"
   pronouns         : # example: "she/her"  
   bio              : "MPhil student at Cambrigde & Intern at MMLab"
