@@ -1,21 +1,7 @@
 hero:
-  eyebrow: "3D Vision, Generative Models, and Healthcare AI"
   title: "Wang Xiaoye"
   subtitle: "Graduate Research Fellow and Visiting Researcher at INSAIT"
-  description: "I work on computer vision and machine learning, with a current focus on 3D perception, generative modeling, and healthcare-facing vision systems."
-  primary_action:
-    label: "View CV"
-    url: "/cv/"
-  secondary_action:
-    label: "Email Me"
-    url: "mailto:wangxiaoye951@gmail.com"
-  stats:
-    - label: "Current Base"
-      value: "INSAIT"
-    - label: "Recent Degree"
-      value: "MPhil, Cambridge"
-    - label: "Core Focus"
-      value: "3D Vision"
+  description: "I work on computer vision and machine learning, with current interests in 3D perception, generative modeling, and vision for healthcare."
 
 research_focus:
   - "3D vision and geometry-aware learning"
