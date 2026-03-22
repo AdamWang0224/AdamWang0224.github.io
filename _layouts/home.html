@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+{% include base_path %}
+{% assign home = site.data.home %}
+{% assign author = site.author %}
+{% assign selected_publications = site.publications | where: "selected", true | sort: "date" | reverse %}
+
+{% if author.avatar contains "://" %}
+  {% assign avatar_url = author.avatar %}
+{% else %}
+  {% assign avatar_url = author.avatar | prepend: "/images/" | prepend: base_path %}
+{% endif %}
+
+<main class="home-page" role="main">
+  <section class="home-hero">
+    <div class="home-hero__copy">
+      {% if home.hero.eyebrow %}
+        <p class="home-hero__eyebrow">{{ home.hero.eyebrow }}</p>
+      {% endif %}
+      <h1 class="home-hero__title">{{ home.hero.title | default: author.name }}</h1>
+      {% if home.hero.subtitle %}
+        <p class="home-hero__subtitle">{{ home.hero.subtitle }}</p>
+      {% endif %}
+      {% if home.hero.description %}
+        <p class="home-hero__description">{{ home.hero.description }}</p>
+      {% endif %}
+
+      <div class="home-hero__actions">
+        {% if home.hero.primary_action %}
+          {% assign primary_url = home.hero.primary_action.url %}
+          {% unless primary_url contains "://" or primary_url contains "mailto:" %}
+            {% assign primary_url = primary_url | prepend: base_path %}
+          {% endunless %}
+          <a class="home-button home-button--primary" href="{{ primary_url }}">{{ home.hero.primary_action.label }}</a>
+        {% endif %}
+
+        {% if home.hero.secondary_action %}
+          {% assign secondary_url = home.hero.secondary_action.url %}
+          {% unless secondary_url contains "://" or secondary_url contains "mailto:" %}
+            {% assign secondary_url = secondary_url | prepend: base_path %}
+          {% endunless %}
+          <a class="home-button home-button--secondary" href="{{ secondary_url }}">{{ home.hero.secondary_action.label }}</a>
+        {% endif %}
+      </div>
+
+      {% if home.hero.stats %}
+        <div class="home-stat-grid">
+          {% for stat in home.hero.stats %}
+            <div class="home-stat-card">
+              <p class="home-stat-card__label">{{ stat.label }}</p>
+              <p class="home-stat-card__value">{{ stat.value }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <aside class="home-hero__panel">
+      <div class="home-profile-card">
+        <img class="home-profile-card__avatar" src="{{ avatar_url }}" alt="{{ author.name }}">
+        <div class="home-profile-card__body">
+          <p class="home-profile-card__name">{{ author.name }}</p>
+          {% if author.bio %}
+            <p class="home-profile-card__role">{{ author.bio }}</p>
+          {% endif %}
+          <div class="home-profile-card__meta">
+            {% if author.employer %}
+              <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i>{{ author.employer }}</span>
+            {% endif %}
+            {% if author.location %}
+              <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ author.location }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      {% if home.quick_links %}
+        <div class="home-section-card">
+          <div class="home-section-card__header">
+            <p class="home-section-card__eyebrow">Quick Links</p>
+            <h2 class="home-section-card__title">Find Me</h2>
+          </div>
+          <div class="home-link-grid">
+            {% for item in home.quick_links %}
+              {% assign item_url = item.url %}
+              {% unless item_url contains "://" or item_url contains "mailto:" %}
+                {% assign item_url = item_url | prepend: base_path %}
+              {% endunless %}
+              <a class="home-link-card" href="{{ item_url }}">
+                {% if item.icon %}
+                  <i class="{{ item.icon }}" aria-hidden="true"></i>
+                {% endif %}
+                <span>{{ item.label }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </aside>
+  </section>
+
+  <section class="home-content-grid">
+    <article class="home-section-card home-section-card--story">
+      <div class="home-section-card__header">
+        <p class="home-section-card__eyebrow">About</p>
+        <h2 class="home-section-card__title">Research Background</h2>
+      </div>
+      <div class="home-rich-text">
+        {{ content }}
+      </div>
+    </article>
+
+    <aside class="home-section-card">
+      <div class="home-section-card__header">
+        <p class="home-section-card__eyebrow">Focus</p>
+        <h2 class="home-section-card__title">Current Interests</h2>
+      </div>
+      {% if home.research_focus %}
+        <div class="home-tag-list">
+          {% for item in home.research_focus %}
+            <span class="home-tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </aside>
+  </section>
+
+  <section class="home-section-card home-section-card--publications">
+    <div class="home-section-card__header home-section-card__header--split">
+      <div>
+        <p class="home-section-card__eyebrow">Publications</p>
+        <h2 class="home-section-card__title">Selected Publications</h2>
+      </div>
+      {% if site.author.googlescholar %}
+        <a class="home-button home-button--tertiary" href="{{ site.author.googlescholar }}">Google Scholar</a>
+      {% endif %}
+    </div>
+
+    {% comment %}
+      To feature a paper on the homepage, add `selected: true`
+      to the front matter of a file in `_publications/`.
+    {% endcomment %}
+    {% if selected_publications.size > 0 %}
+      <div class="publication-stack">
+        {% for post in selected_publications limit: 4 %}
+          {% include publication-card.html post=post %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <p>Selected papers will appear here soon.</p>
+      </div>
+    {% endif %}
+  </section>
+
+  <section class="home-section-card">
+    <div class="home-section-card__header">
+      <p class="home-section-card__eyebrow">Updates</p>
+      <h2 class="home-section-card__title">News</h2>
+    </div>
+
+    {% if home.news %}
+      <div class="news-list">
+        {% for item in home.news %}
+          <article class="news-item">
+            <div class="news-item__period">{{ item.period }}</div>
+            <div class="news-item__content">
+              <h3 class="news-item__title">{{ item.title }}</h3>
+              {% if item.details %}
+                <p class="news-item__details">{{ item.details }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <p>News updates will appear here soon.</p>
+      </div>
+    {% endif %}
+  </section>
+</main>

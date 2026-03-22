@@ -1,0 +1,46 @@
+{% include base_path %}
+{% assign publication = include.post %}
+
+{% assign detail_url = publication.url | prepend: base_path %}
+{% assign paper_url = publication.paperurl %}
+{% assign slides_url = publication.slidesurl %}
+
+{% unless paper_url contains "://" or paper_url contains "mailto:" %}
+  {% if paper_url %}
+    {% assign paper_url = paper_url | prepend: base_path %}
+  {% endif %}
+{% endunless %}
+
+{% unless slides_url contains "://" or slides_url contains "mailto:" %}
+  {% if slides_url %}
+    {% assign slides_url = slides_url | prepend: base_path %}
+  {% endif %}
+{% endunless %}
+
+<article class="publication-card">
+  <div class="publication-card__body">
+    <p class="publication-card__meta">
+      {% if publication.venue %}{{ publication.venue }}{% endif %}
+      {% if publication.date %}
+        {% if publication.venue %} · {% endif %}
+        {{ publication.date | date: "%Y" }}
+      {% endif %}
+    </p>
+    <h3 class="publication-card__title">
+      <a href="{{ detail_url }}">{{ publication.title }}</a>
+    </h3>
+    {% if publication.excerpt %}
+      <p class="publication-card__excerpt">{{ publication.excerpt | markdownify | strip_html | strip_newlines }}</p>
+    {% endif %}
+  </div>
+
+  <div class="publication-card__links">
+    <a href="{{ detail_url }}">Details</a>
+    {% if paper_url %}
+      <a href="{{ paper_url }}">Paper</a>
+    {% endif %}
+    {% if slides_url %}
+      <a href="{{ slides_url }}">Slides</a>
+    {% endif %}
+  </div>
+</article>
