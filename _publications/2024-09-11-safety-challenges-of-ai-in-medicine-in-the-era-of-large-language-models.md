@@ -9,7 +9,7 @@ authors: "Xiaoye Wang, Nicole Xi Zhang, Hongyu He, Trang Nguyen, Kun-Hsing Yu, H
 excerpt: "This review examines safety risks in medical AI during the LLM era, covering system-level safety concerns, LLM-specific issues, and the challenges of deploying trustworthy AI in clinical practice."
 paperurl: "https://arxiv.org/abs/2409.18968"
 selected: true
-citation: "Wang, X., Zhang, N. X., He, H., Nguyen, T., Yu, K.-H., Deng, H., Brandt, C., Bitterman, D. S., Pan, L., Cheng, C.-Y., Zou, J., & Liu, D. (2024). &quot;Safety Challenges of AI in Medicine in the Era of Large Language Models.&quot; <i>arXiv preprint arXiv:2409.18968</i>."
+# citation: "Wang, X., Zhang, N. X., He, H., Nguyen, T., Yu, K.-H., Deng, H., Brandt, C., Bitterman, D. S., Pan, L., Cheng, C.-Y., Zou, J., & Liu, D. (2024). &quot;Safety Challenges of AI in Medicine in the Era of Large Language Models.&quot; <i>arXiv preprint arXiv:2409.18968</i>."
 ---
 
 This review discusses the safety challenges of applying AI in medicine, with a particular focus on
