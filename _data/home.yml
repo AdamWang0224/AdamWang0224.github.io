@@ -5,7 +5,7 @@ hero:
 
 research_focus:
   - "3D vision and geometry-aware learning"
-  - "Generative models for visual understanding"
+  - "2D & 3D Generative models"
   - "Computer vision for healthcare applications"
 
 quick_links:
@@ -22,16 +22,24 @@ quick_links:
     url: "/cv/"
     icon: "fas fa-file-lines"
 
+
 news:
-  - period: "Now"
-    title: "Graduate Research Fellow and Visiting Researcher at INSAIT"
-    details: "Working with Luc Van Gool and Danda Paudel on 3D vision."
-  - period: "Recent"
-    title: "Completed the MPhil in Data Intensive Science at the University of Cambridge"
-    details: "Focused on data-intensive machine learning and research-driven problem solving."
-  - period: "2024"
-    title: "Graduated from Harbin Institute of Technology with a BSc in Mathematics"
-    details: "Built the mathematical foundation that continues to shape my work in vision and learning."
-  - period: "Before"
-    title: "Research experience across CUHK, A*STAR, and NUS"
-    details: "Worked on computer vision, multimodal learning, and healthcare-related applications."
+  - period: "2026.02"
+    title: "Paper accepted to CVPR 2026"
+    details: "My first first-author paper on 3D-aware multi-task learning has been accepted to CVPR 2026!"
+
+  - period: "2025.09"
+    title: "Joined INSAIT as a Graduate Research Fellow"
+    details: "I joined INSAIT as a Graduate Research Fellow, where I work on 3D vision and generative modeling to build digital twins for real-world objects and environments."
+
+  - period: "2025.08"
+    title: "Completed my MPhil in Data Intensive Science at Cambridge"
+    details: "I completed my MPhil in Data Intensive Science at the University of Cambridge, where I focused on data-intensive machine learning. My thesis, Transforming Drug Discovery with Generative AI and Foundation Models, explored the use of generative AI and foundation models for medical image translation and drug discovery. [Project link](https://github.com/AdamWang0224/Transforming-Drug-Discovery-with-Generative-AI-and-Foundation-Models)"
+
+  - period: "2024.06"
+    title: "Graduated from Harbin Institute of Technology"
+    details: "I graduated from HIT with a Bachelor's degree in Information and Computing Science and was honored to be recognized as both a Provincial Outstanding Graduate (top 6% in the province) and a University Outstanding Graduate."
+
+  - period: "2023.12"
+    title: "Paper accepted to AAAI 2024"
+    details: "My work on retinal image registration, conducted during my internship at I2R, A*STAR, was accepted to AAAI 2024!"

@@ -74,59 +74,57 @@ layout: default
     </div>
   </section>
 
-  <div class="home-columns">
-    <section class="home-section">
-      <div class="home-section__header">
-        <h2 class="home-section__title">News</h2>
-      </div>
-      <div class="home-section__body">
-        {% if home.news %}
-          <ul class="news-list">
-            {% for item in home.news %}
-              <li class="news-item">
-                <span class="news-item__period">[{{ item.period }}]</span>
-                <span class="news-item__text">
-                  <strong>{{ item.title }}</strong>
-                  {% if item.details %} {{ item.details }}{% endif %}
-                </span>
-              </li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          <div class="empty-state">
-            <p>News updates will appear here soon.</p>
-          </div>
-        {% endif %}
-      </div>
-    </section>
-
-    <section class="home-section">
-      <div class="home-section__header home-section__header--split">
-        <h2 class="home-section__title">Selected Publications</h2>
-        <div class="home-section__actions">
-          <a href="{{ base_path }}/publications/">View all</a>
-          {% if site.author.googlescholar %}
-            <a href="{{ site.author.googlescholar }}">Google Scholar</a>
-          {% endif %}
+  <section class="home-section">
+    <div class="home-section__header">
+      <h2 class="home-section__title">News</h2>
+    </div>
+    <div class="home-section__body">
+      {% if home.news %}
+        <ul class="news-list">
+          {% for item in home.news %}
+            <li class="news-item">
+              <span class="news-item__period">[{{ item.period }}]</span>
+              <span class="news-item__text">
+                <strong>{{ item.title }}</strong>
+                {% if item.details %} {{ item.details }}{% endif %}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <div class="empty-state">
+          <p>News updates will appear here soon.</p>
         </div>
-      </div>
-      <div class="home-section__body">
-        {% comment %}
-          To feature a paper on the homepage, add `selected: true`
-          to the front matter of a file in `_publications/`.
-        {% endcomment %}
-        {% if selected_publications.size > 0 %}
-          <div class="publication-stack publication-stack--compact">
-            {% for post in selected_publications limit: 3 %}
-              {% include publication-card.html post=post compact=true %}
-            {% endfor %}
-          </div>
-        {% else %}
-          <div class="empty-state">
-            <p>Selected papers will appear here soon.</p>
-          </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section__header home-section__header--split">
+      <h2 class="home-section__title">Selected Publications</h2>
+      <div class="home-section__actions">
+        <a href="{{ base_path }}/publications/">View all</a>
+        {% if site.author.googlescholar %}
+          <a href="{{ site.author.googlescholar }}">Google Scholar</a>
         {% endif %}
       </div>
-    </section>
-  </div>
+    </div>
+    <div class="home-section__body">
+      {% comment %}
+        To feature a paper on the homepage, add `selected: true`
+        to the front matter of a file in `_publications/`.
+      {% endcomment %}
+      {% if selected_publications.size > 0 %}
+        <div class="publication-stack publication-stack--compact">
+          {% for post in selected_publications limit: 3 %}
+            {% include publication-card.html post=post compact=true %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="empty-state">
+          <p>Selected papers will appear here soon.</p>
+        </div>
+      {% endif %}
+    </div>
+  </section>
 </main>

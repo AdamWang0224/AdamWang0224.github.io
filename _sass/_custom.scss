@@ -173,18 +173,6 @@ body {
   margin-bottom: 0.55rem;
 }
 
-.home-columns {
-  @include breakpoint($medium) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2rem;
-  }
-}
-
-.home-columns .home-section {
-  border-bottom: 0;
-}
-
 .publication-stack {
   display: grid;
   gap: 1rem;
