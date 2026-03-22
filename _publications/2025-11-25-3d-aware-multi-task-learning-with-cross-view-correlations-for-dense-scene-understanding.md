@@ -12,8 +12,8 @@ selected: true
 # citation: "Wang, X., Tang, C., Yue, X., & Li, W.-H. (2025). &quot;3D-Aware Multi-Task Learning with Cross-View Correlations for Dense Scene Understanding.&quot; <i>CVPR 2026; arXiv preprint arXiv:2511.20646</i>."
 ---
 
-This paper addresses multi-task learning for dense scene understanding by introducing a lightweight
+This paper addresses multi-task learning (MTL) for dense scene understanding by introducing a lightweight
 cross-view module that captures 3D-aware correlations across views. The method injects geometric
-consistency into the network and improves dense prediction performance on challenging benchmarks.
+consistency into the MTL encoders and improves dense prediction performance on challenging MTL benchmarks.
 
 [arXiv](https://arxiv.org/abs/2511.20646){:target="_blank"}
