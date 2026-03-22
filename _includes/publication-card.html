@@ -29,6 +29,9 @@
     <h3 class="publication-card__title">
       <a href="{{ detail_url }}">{{ publication.title }}</a>
     </h3>
+    {% if publication.authors %}
+      <p class="publication-card__authors">{{ publication.authors }}</p>
+    {% endif %}
     {% unless include.compact %}
     {% if publication.excerpt %}
       <p class="publication-card__excerpt">{{ publication.excerpt | markdownify | strip_html | strip_newlines }}</p>

@@ -234,6 +234,12 @@ body {
   text-decoration: underline;
 }
 
+.publication-card__authors {
+  margin: 0.2rem 0 0;
+  color: var(--site-muted);
+  line-height: 1.6;
+}
+
 .publication-card__excerpt {
   margin: 0.35rem 0 0;
 }
