@@ -173,6 +173,32 @@ body {
   margin-bottom: 0.55rem;
 }
 
+.news-item__heading {
+  display: block;
+}
+
+.news-item__title {
+  color: var(--site-text);
+}
+
+.news-item__details {
+  margin-top: 0.2rem;
+}
+
+.news-item__details p {
+  margin: 0;
+}
+
+.news-item__details a {
+  color: var(--site-link);
+  text-decoration: none;
+}
+
+.news-item__details a:hover {
+  color: var(--site-link-hover);
+  text-decoration: underline;
+}
+
 .publication-stack {
   display: grid;
   gap: 1rem;
